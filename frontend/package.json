@@ -64,5 +64,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://192.168.1.7:1000"
+  "proxy": "https://ecommerce-mern-backend-pv8p.onrender.com"
 }
