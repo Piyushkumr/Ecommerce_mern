@@ -1,0 +1,64 @@
+product controller ==> update product ==> findByIdAndUpdate me useFindAndModify:false
+
+
+
+// export const productDetailsReducer = (state = { product: {} }, action) => {
+    
+//     switch (action.type) {
+//         case PRODUCT_DETAILS_REQUEST:
+//             return {
+//                 loading: true,
+//                 ...state,
+//             };
+//         case PRODUCT_DETAILS_SUCCESS:
+//             return {
+//                 loading: false,
+//                 product: action.payload,
+//             };
+//         case PRODUCT_DETAILS_FAIL:
+//             return {
+//                 loading: false,
+//                 error: action.payload,
+//             };
+//         case CLEAR_ERRORS:
+//             return {
+//                 ...state,
+//                 error: null,
+//             }
+
+//         default:
+//             return state;
+//     }
+// };
+
+
+
+import React from 'react'
+import ReactStars from 'react-stars'
+import profilePng from '../../images/Profile.png'
+
+const ReviewCard = ({ review }) => {
+
+    const options = {
+        edit: false,
+        color: "rgba(20,20,20,0.1)",
+        activeColor: "tomato",
+        size: window.innerHeight < 600 ? 20 : 25,
+        value: review.rating,
+        isHalf: true,
+    }
+
+  return (
+    <div className='reviewCard'>
+        <img src={profilePng} alt='User' />
+        <p>{review.name}</p>
+        <ReactStars {...options} />
+        <span>{review.comment}</span>
+    </div>
+  )
+}
+
+export default ReviewCard
+
+
+"proxy": "http://192.168.1.2:1000"
